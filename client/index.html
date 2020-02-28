@@ -22,14 +22,37 @@
         <div class = "row">
                 <button class = "col">Previous Orders</button>
                 <button class = "col">Items</button>
-                <button class = "col">Basket</button>
+                <button class= "col" id="openBasket" onclick="openBasket();">Basket</button><br>
         </div>
     </div>
     <div class="container-fluid" id = "itemlist">
         <div class = "row">
             <h2 class = "col" style= "height: 40px; text-align: center"> Click To Add </h2>
+            <button class = "col-12" style= "height: 40px" onclick="addItemToOrder();"> Item1 </button>
         </div>
     </div>
+
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="openBasketModal" data-toggle="modal">
+        <div class="modal-dialog modal-dialog centered modal-lg">
+          <div class="modal-content">
+            <form onsubmit="postData(event)">
+                <div class="modal-header">
+                    <h4>Current Order:</h4>
+                </div>
+                <div class="modal-body" >
+                    <button class="btn btn-success" id="checkout" onclick="getData();">View Basket</button><br>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-info" id="checkout" onclick="postData(event);">Checkout</button><br>
+                <button class="btn btn-danger" id="openBasket" onclick="refreshPage()">Clear Basket</button><br>
+                </div>
+                
+                
+            </form>
+          </div>
+        </div>
+      </div>
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
