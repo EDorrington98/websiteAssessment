@@ -25,6 +25,8 @@ let getData = () => {
             let div = document.createElement("div");
             let listItem = document.createElement("li");
             listItem.innerText = items.name + " price: " + items.price;
+            let image = document.createElement("img");
+            //......
             let button = document.createElement("button");
             button.className = "btn btn-danger";
             button.innerText = "Delete"
@@ -32,6 +34,7 @@ let getData = () => {
                 deleteData(items.id);
             })
             div.appendChild(button);
+            //... append image
             listItem.appendChild(div);
             list.appendChild(listItem);
         }
@@ -44,13 +47,13 @@ let postData = (event) => {
     event.preventDefault();
     let form = event.target;
     let obj = {};
-    let value = form.getElementsByTagName("inputs");
-    console.log(value);
-    for (let inputs of values) {
-        if (inputs.name) {  
-            obj[inputs.name] = inputs.name;
-            obj[inputs.cost] = inputs.cost;
-            obj[inputs.url] = inputs.url;
+    console.log(event.target)
+   for (let inputs of form) {
+        if (inputs.name) {
+            console.log(inputs) 
+            console.log(inputs.name) 
+             
+            obj[inputs.name] = inputs.value;
         }
     }
     let request = new XMLHttpRequest();
