@@ -21,19 +21,17 @@
     <div class="container-fluid">
         <div class = "row">
                 <button class = "col">Previous Orders</button>
-                <button class = "col">Items</button>
-                <button class="btn btn-default" id="openBasket" onclick="openBasket();">Basket</button><br>
+                <button class = "col" onclick="window.location.href = 'items.html'">Items</button>
+                <button class= "col" id="openBasket" onclick="openBasket();">Basket</button><br>
         </div>
     </div>
     <div class="container-fluid" id = "itemlist">
         <div class = "row">
+            <h2 class = "col" style= "height: 40px; text-align: center"> Click To Add </h2>
             <button class = "col-12" style= "height: 40px" onclick="addItemToOrder();"> Item1 </button>
         </div>
     </div>
 
-    <div class="popup text-center text-danger" onclick="myFunction()">
-        <span class="popuptext" id="myPopup"></span>
-    </div>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="openBasketModal" data-toggle="modal">
         <div class="modal-dialog modal-dialog centered modal-lg">
