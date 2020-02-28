@@ -12,3 +12,45 @@ body,html {
     margin: 1px;
     border-radius: 5px;
 }
+
+.btn-group button {
+    background-color: #4CAF50; 
+    border: 1px solid green;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none;
+  }
+  
+  
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+  .btn-group button:hover {
+    background-color: #3e8e41;
+  }
+
+  .popup{
+    border-radius: 7px;
+    background-image:url("CocaColaGlass.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:30px auto 0;
+    padding:6px;  
+    position:absolute;
+    width:240px;
+    height: 150px;
+    top: 80%;
+    left: 0%;
+    margin-left: 60px;
+    margin-top: -40px;
+}
