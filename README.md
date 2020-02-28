@@ -1,2 +1,1 @@
-Website README.md
-hello
+#This is the README for TeAm ChAoS
