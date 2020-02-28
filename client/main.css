@@ -1,0 +1,14 @@
+body,html {
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.box {
+    background-color: #aaa;
+    border: 2px solid black;
+    margin: 1px;
+    border-radius: 5px;
+}
